@@ -10,5 +10,4 @@ public interface StudentSolrRepository extends SolrRepository<Student, String> {
     void save(Student student);
     List<Student> findAll();
     List<Student> findByAge(Integer age);
-    // List<Student> findByAgeBetween(Integer age1, Integer age2);
 }

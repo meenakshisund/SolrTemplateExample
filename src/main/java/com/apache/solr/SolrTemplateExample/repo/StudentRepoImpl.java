@@ -38,13 +38,6 @@ public class StudentRepoImpl implements StudentSolrRepository {
         return page.getContent();
     }
 
-    /*@Override
-    public List<Student> findByAgeBetween(Integer age1, Integer age2) {
-        Query query = SolrQueryUtils.betweenQuery("age", age1, age2);
-        ScoredPage<Student> page = solrTemplate.queryForPage(STUDENT_COLLECTION, query, Student.class);
-        return page.getContent();
-    }*/
-
     @Override
     public long count() { return 0; }
 }

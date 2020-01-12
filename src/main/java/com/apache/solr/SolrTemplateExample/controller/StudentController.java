@@ -27,10 +27,4 @@ public class StudentController {
     public List<Student> getStudentByAge(@PathVariable("age") Integer age) {
         return studentSolrRepository.findByAge(age);
     }
-
-    /*@GetMapping("/students/age/between/{age1}/{age2}")
-    public List<Student> getStudentByAge(@PathVariable("age1") Integer age1,
-                                         @PathVariable("age2") Integer age2) {
-        return studentSolrRepository.findByAgeBetween(age1, age2);
-    }*/
 }
