@@ -3,10 +3,7 @@ package com.apache.solr.SolrTemplateExample.controller;
 import com.apache.solr.SolrTemplateExample.model.Student;
 import com.apache.solr.SolrTemplateExample.repo.StudentSolrRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,8 +18,19 @@ public class StudentController {
         studentSolrRepository.save(student);
     }
 
-    @GetMapping("/student/all")
+    @GetMapping("/students/all")
     public List<Student> getAllStudents() {
         return studentSolrRepository.findAll();
     }
+
+    @GetMapping("/students/{age}")
+    public List<Student> getStudentByAge(@PathVariable("age") Integer age) {
+        return studentSolrRepository.findByAge(age);
+    }
+
+    /*@GetMapping("/students/age/between/{age1}/{age2}")
+    public List<Student> getStudentByAge(@PathVariable("age1") Integer age1,
+                                         @PathVariable("age2") Integer age2) {
+        return studentSolrRepository.findByAgeBetween(age1, age2);
+    }*/
 }

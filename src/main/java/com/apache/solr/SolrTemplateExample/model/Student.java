@@ -4,7 +4,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
-@SolrDocument(collection = "Student")
+import static com.apache.solr.SolrTemplateExample.model.Constants.STUDENT_COLLECTION;
+
+@SolrDocument(collection = STUDENT_COLLECTION)
 public class Student {
 
     @Id
