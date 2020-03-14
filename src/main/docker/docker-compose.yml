@@ -8,5 +8,4 @@ services:
       #- ./solr_cores/IndianTowns:/opt/solr/server/solr/IndianTowns
       #- ./solr_cores/TownCategory:/opt/solr/server/solr/TownCategory
 
-
-# docker exec -it --user=solr docker_solr_1 bin/solr Student -c gettingstarted
+# docker exec -it --user=solr docker_solr_1 bin/solr create_core -c Student
