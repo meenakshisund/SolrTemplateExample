@@ -15,12 +15,12 @@ public class StudentController {
     @Autowired
     private StudentSolrRepository studentSolrRepository;
 
-    @PostMapping("/create/student")
+    @PostMapping("/student")
     public void createStudent(@RequestBody Student student) {
         studentSolrRepository.save(student);
     }
 
-    @GetMapping("/students/all")
+    @GetMapping("/students")
     public List<Student> getAllStudents() {
         return studentSolrRepository.findAll();
     }

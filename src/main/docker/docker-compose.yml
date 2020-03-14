@@ -4,8 +4,4 @@ services:
     image: solr:7.6
     ports:
       - "8983:8983"
-    #volumes:
-      #- ./solr_cores/IndianTowns:/opt/solr/server/solr/IndianTowns
-      #- ./solr_cores/TownCategory:/opt/solr/server/solr/TownCategory
-
 # docker exec -it --user=solr docker_solr_1 bin/solr create_core -c Student
