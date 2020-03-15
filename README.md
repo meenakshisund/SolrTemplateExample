@@ -1,4 +1,5 @@
-1. docker-compose up
+1. cd src/main/docker;  
+   docker-compose up
 2. docker exec -it --user=solr docker_solr_1 bin/solr create_core -c Student
 (docker_solr_1 is your container **name** - docker container ls)
 3. To view in swagger, use this URL - http://localhost:8080/swagger-ui.html
